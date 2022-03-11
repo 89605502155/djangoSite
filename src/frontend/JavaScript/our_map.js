@@ -9,6 +9,5 @@ view: new ol.View({
   center: ol.proj.fromLonLat([0, 0]),
   zoom: 3
 })
-]
 });
 
