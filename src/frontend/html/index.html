@@ -9,19 +9,29 @@
     <link rel="stylesheet" href="https://getbootstrap.com/docs/5.1/examples/cover/cover.css">
 
     <link rel="stylesheet" href="../JavaScript/libs/v6.13.0-dist/ol.css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.13.0/build/ol.js"></script>
     <style>
       .map {
         height: 500px;
         width: 100%;
       }
+      .cover-container { /* override for map width */
+        max-width: 100%;
+      }
     </style>
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.13.0/build/ol.js"></script>
-
 </head>
+<<<<<<< HEAD:src/frontend/html/index.html
 <body>
 
   <header class="mb-auto">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+=======
+<body class="d-flex h-100 text-center text-white bg-dark">
+    
+ 
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+>>>>>>> 17136a4941eb9995f74275debd7d55ae72d94aba:src/frontend/html/map_page.html
       <h3 class="float-md-start mb-0">Russia North Ecology Base</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link"  href="home_page.html">Home</a> 
@@ -33,6 +43,7 @@
         <a class="nav-link" href="publications_page.html">Publications</a>
         <a class="nav-link" href="#">Contact</a>
       </nav>
+<<<<<<< HEAD:src/frontend/html/index.html
     </div>
   </header>
 
@@ -49,5 +60,14 @@
         
       
     
+=======
+    </header>
+    <main class="px-3">
+    <div id="map" class="map"></div>
+    <script src="../JavaScript/libs/v6.13.0-dist/ol.js"></script>
+    <script src="../JavaScript/our_map.js"></script>
+    </main>
+  </div>
+>>>>>>> 17136a4941eb9995f74275debd7d55ae72d94aba:src/frontend/html/map_page.html
 </body>
 </html>
