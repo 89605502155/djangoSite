@@ -30,9 +30,10 @@ var iconFeature1 = new ol.Feature({
 	 // style for all elements on a layer
 	style: new ol.style.Style({
 	  image: new ol.style.Icon({
-		anchor: [0.5, 46],
+		anchor: [0.5, 36],
 		anchorXUnits: 'fraction',
 		anchorYUnits: 'pixels',
+		opacity: 1,
 		src: 'https://openlayers.org/en/v4.6.4/examples/data/icon.png'
 	  })
 	})
