@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../css/cover.css">
 
   <!--<link rel="stylesheet" href="../JavaScript/libs/v6.13.0-dist/ol.css">
-  <link rel="stylesheet" href="../css/style.css">
+  
 <link rel="stylesheet" href="../JavaScript/leaflet1_7/leaflet.css" />
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />--> 
@@ -17,13 +17,8 @@
   
   
   <link rel="stylesheet" href="../JavaScript/leaflet1_7/leaflet.css" />
+  <link rel="stylesheet" href="../css/style.css">
   
-  <style type="text/css">
-    #map{
-      height: 100vh;
-    }
-  </style>
-    
 </head>
 
 <body>
@@ -53,20 +48,15 @@
 
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>-->
 
-    <div id="map" ></div>
+    <div id="map" class="map"></div>
 </body>
 </html>
 
     
     
     <script src="../JavaScript/leaflet1_7/leaflet.js"></script>
-    <script type="text/javascript">
-      var map = L.map('map').setView([28.3949, 84.1240], 8);
-      var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      });
-      osm.addTo(map);
-    </script>
+    <script src="../JavaScript/our_map.js"></script>
+
 
 
 
