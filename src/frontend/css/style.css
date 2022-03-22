@@ -1,3 +1,6 @@
+.cover-container { /* override for map width */
+    max-width: 100%;
+}
 .map {
     height: 500px;
     width: 100%;
