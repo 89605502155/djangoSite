@@ -1,0 +1,13 @@
+{
+    "name": "ogc-map-tiles",
+    "dependencies": {
+      "ol": "6.13.0"
+    },
+    "devDependencies": {
+      "parcel": "^2.0.0"
+    },
+    "scripts": {
+      "start": "parcel frontend/html/index.html",
+      "build": "parcel build --public-url . index.html"
+    }
+  }
