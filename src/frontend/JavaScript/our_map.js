@@ -4,12 +4,19 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 osm.addTo(map);
-*/
+
+https://leaflet-extras.github.io/leaflet-providers/preview/
 
 var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 });
 Esri_WorldStreetMap.addTo(map);
+*/
+var Esri_OceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri',
+	maxZoom: 13
+});
+Esri_OceanBasemap.addTo(map);
 
 var data = [
     [5586,	73.1105,	61.3195],
@@ -49,7 +56,8 @@ var data = [
     ];
     
     for (var i = 0; i < data.length; ++i) {
-        L.marker([data[i][1], data[i][2]]).addTo(map).bindPopup(`Name: ${data[i][0].toString()}`);
+        L.marker([data[i][1], data[i][2]]).addTo(map).bindPopup(`Name: ${data[i][0].toString()} <br>
+            Longitude: ${data[i][2].toString()}<br>Latitude: ${data[i][1].toString()}`);
     }
     
     //map.setView([data[0][1], data[0][2]], 3.1);
