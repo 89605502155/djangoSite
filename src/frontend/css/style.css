@@ -1,6 +1,27 @@
+.cover-container { /* override for map width */
+    max-width: 100%;
+}
 .map {
-    height: 500px;
+    height: 800px;
     width: 100%;
+}
+header {
+    position: fixed; /* Фиксированное позиционирование */
+    height: 60px;
+    left: 0; right: 0; /* Вся ширина */
+    top: 0px; /* Положение сверху */
+    padding: 5px; /* Поля вокруг текста */
+    border: 10px;
+    background-color: #080808;
+    z-index: 100;
+}
+.headOfSite{
+    margin: 0;
+}
+main{
+    position: relative;
+    top: 60px;
+    z-index: 10;
 }
 
 
