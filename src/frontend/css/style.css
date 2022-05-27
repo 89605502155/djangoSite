@@ -1,12 +1,22 @@
 .cover-container { /* override for map width */
     max-width: 100%;
 }
-#name-site{
+header h3{
+    color: #0a0909;
     text-transform: uppercase;
+    margin-left: 1%;
+    -webkit-text-stroke:  .01em #c4c2c2;
+}
+.map{
+    width: 100%;
+}
+header{
+    background: linear-gradient(to right, #29f925,#77169e);
+    z-index: 100;
+    opacity: 0.7;
 }
 @media (max-width: 275px){
     .map {
-        width: 100%;
         height: 500px;
     }
     header {
@@ -17,18 +27,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 50%;
     }
     header a{
         font-size: 45%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -38,7 +42,6 @@
 }
 @media (min-width: 276px) and (max-width: 320px){
     .map {
-        width: 100%;
         height: 500px;
     }
     header {
@@ -49,18 +52,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 70%;
     }
     header a{
         font-size: 65%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -70,7 +67,6 @@
 }
 @media (min-width: 321px) and (max-width: 376px){
     .map {
-        width: 100%;
         height: 500px;
     }
     header {
@@ -81,18 +77,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 60%;
     }
     header a{
         font-size: 45%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -102,7 +92,6 @@
 }
 @media (min-width: 377px) and (max-width: 410px) {
     .map {
-        width: 100%;
         height: 700px;
     }
     header {
@@ -113,18 +102,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 55%;
     }
     header a{
         font-size: 50%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -134,7 +117,6 @@
 }
 @media (min-width: 411px) and (max-width: 479px) {
     .map {
-        width: 100%;
         height: 700px;
     }
     header {
@@ -145,18 +127,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 60%;
     }
     header a{
         font-size: 58%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -166,7 +142,6 @@
 }
 @media (min-width: 480px) and (max-width: 519px) {
     .map {
-        width: 100%;
         height: 700px;
     }
     header {
@@ -177,18 +152,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 60%;
     }
     header a{
         font-size: 58%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -198,7 +167,6 @@
 }
 @media (min-width: 520px) and (max-width: 600px) {
     .map {
-        width: 100%;
         height: 700px;
     }
     header {
@@ -209,18 +177,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 95%;
     }
     header a{
         font-size: 80%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -230,7 +192,6 @@
 }
 @media (min-width: 601px) and (max-width: 699px) {
     .map {
-        width: 100%;
         height: 700px;
     }
     header {
@@ -241,18 +202,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 90%;
     }
     header a{
         font-size: 70%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -262,7 +217,6 @@
 }
 @media (min-width: 700px) and (max-width: 769px) {
     .map {
-        width: 100%;
         height: 700px;
     }
     header {
@@ -273,18 +227,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 100%;
     }
     header a{
         font-size: 90%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -294,7 +242,6 @@
 }
 @media (min-width: 770px) and (max-width: 900px) {
     .map {
-        width: 100%;
         height: 700px;
     }
     header {
@@ -305,18 +252,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 120%;
     }
     header a{
         font-size: 100%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -326,7 +267,6 @@
 }
 @media (min-width: 901px) and (max-width: 1023px) {
     .map {
-        width: 100%;
         height: 900px;
     }
     header {
@@ -337,18 +277,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 100%;
     }
     header a{
         font-size: 100%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
@@ -359,7 +293,6 @@
 
 @media (min-width: 1024px){
     .map {
-        width: 100%;
         height: 1000px;
     }
     header {
@@ -370,18 +303,12 @@
         padding: 5px; /* Поля вокруг текста */
         border: 10px;
         /*background-color: #080808;*/
-        background: linear-gradient(to right, #3dc134,#faff00,#0400ff);
-        z-index: 100;
-        opacity: 0.7;
     }
     header h3{
         font-size: 140%;
     }
     header a{
         font-size: 120%;
-    }
-    .headOfSite{
-        margin: 0;
     }
     main{
         position: relative;
