@@ -1,6 +1,9 @@
 .cover-container { /* override for map width */
     max-width: 100%;
 }
+#name-site{
+    text-transform: uppercase;
+}
 @media (max-width: 275px){
     .map {
         width: 100%;
