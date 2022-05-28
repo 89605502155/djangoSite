@@ -1,22 +1,29 @@
-var map = L.map('map').setView([75, 124.1240], 3.5);
-/*
-var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-});
-osm.addTo(map);
+function mymap(leftmargin_,rightmargin_,data_,maxzoom_,size_){
+    var map = L.map('map').setView([leftmargin_, rightmargin_], size_);
+    /*
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    });
+    osm.addTo(map);
 
-https://leaflet-extras.github.io/leaflet-providers/preview/
+    https://leaflet-extras.github.io/leaflet-providers/preview/
 
-var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-});
-Esri_WorldStreetMap.addTo(map);
-*/
-var Esri_OceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri',
-	maxZoom: 13
-});
-Esri_OceanBasemap.addTo(map);
+    var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+    });
+    Esri_WorldStreetMap.addTo(map);
+    */
+    var Esri_OceanBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri',
+        maxZoom: maxzoom_
+    });
+    Esri_OceanBasemap.addTo(map);
+    for (var i = 0; i < data_.length; ++i) {
+        L.marker([data_[i][1], data_[i][2]]).addTo(map).bindPopup(`Name: ${data[i][0].toString()} <br>
+            Longitude: ${data_[i][2].toString()}<br>Latitude: ${data_[i][1].toString()}`);
+    }
+}
+
 
 var data = [
     [5586,	73.1105,	61.3195],
@@ -55,9 +62,6 @@ var data = [
     [5649,	75.3966666666667,	64.3666666666667],
     ];
     
-    for (var i = 0; i < data.length; ++i) {
-        L.marker([data[i][1], data[i][2]]).addTo(map).bindPopup(`Name: ${data[i][0].toString()} <br>
-            Longitude: ${data[i][2].toString()}<br>Latitude: ${data[i][1].toString()}`);
-    }
+var ourmap_=mymap(75, 124.1240,data,13,3.5);
     
     //map.setView([data[0][1], data[0][2]], 3.1);
