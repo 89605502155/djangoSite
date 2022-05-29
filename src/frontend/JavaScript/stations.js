@@ -19,6 +19,7 @@ function list_stations(cb) {
 	);
 }
 
+console.log(list_stations(_all_stations));
 /*
 ** Pass the station identifier as the first argument and a callback function as
 ** the second argument.

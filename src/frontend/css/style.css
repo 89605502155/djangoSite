@@ -15,6 +15,41 @@ header{
     z-index: 100;
     opacity: 0.7;
 }
+.kindsOfvariablesForMap{
+    position: relative;
+    width: 40%;
+    background-color: white;
+    text-align: left;
+
+}
+.kindsOfvariablesForMap h3{
+    color: #ad25db;
+    text-align: center;
+}
+.buttonforSendVar{
+    margin-left: 35%;
+}
+.kindsOfvariablesForMap .variantsOfvariables{
+    display: flex;
+    /*flex-direction: column;*/
+    /*flex-wrap: wrap;*/
+    /*flex: 2;*/
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+}
+.kindsOfvariablesForMap .variantsOfvariables div{
+    flex: 1 1 auto;
+    width: 50%;
+    padding-left: 5%;
+}
+.kindsOfvariablesForMap label{
+    color: green;
+    margin-left: 2%;
+}
+/*.kindsOfvariablesForMap input{
+    margin-left: 10%;
+}*/
 @media (max-width: 275px){
     .map {
         height: 500px;

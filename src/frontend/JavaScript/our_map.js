@@ -1,3 +1,9 @@
+function answerCheckboxMap(){
+    var name=document.getElementById('nameStf');
+    console.log(name);
+}
+
+/*Эта функция главная. Она отрисовывает карту */
 function mymap(leftmargin_,rightmargin_,data_,maxzoom_,size_){
     var map = L.map('map').setView([leftmargin_, rightmargin_], size_);
     /*
@@ -63,5 +69,5 @@ var data = [
     ];
     
 var ourmap_=mymap(75, 124.1240,data,13,3.5);
-    
+var ttt=answerCheckboxMap();
     //map.setView([data[0][1], data[0][2]], 3.1);
