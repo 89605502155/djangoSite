@@ -46,6 +46,12 @@ header{
     width: 50%;
     padding-left: 5%;
 }
+.functionsWithData button{
+    border:0.5px solid black;
+}
+.functionsWithData input{
+    border:0.5px solid black;
+}
 .kindsOfvariablesForMap .variantsOfvariables{
     display: flex;
     /*flex-direction: column;*/
