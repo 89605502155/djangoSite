@@ -20,14 +20,31 @@ header{
     width: 40%;
     background-color: white;
     text-align: left;
+    margin-bottom: 50px;
 
 }
 .kindsOfvariablesForMap h3{
     color: #ad25db;
     text-align: center;
 }
-.buttonforSendVar{
+/*.buttonforSendVar{
     margin-left: 35%;
+}*/
+.functionsWithData {
+    display: flex;
+    /*flex-direction: column;*/
+    /*flex-wrap: wrap;*/
+    /*flex: 2;*/
+    flex-wrap: wrap;
+    justify-content:space-around;
+    border-top: 5px solid #ad25db;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.functionsWithData div{
+    flex: 1 1 auto;
+    width: 50%;
+    padding-left: 5%;
 }
 .kindsOfvariablesForMap .variantsOfvariables{
     display: flex;
