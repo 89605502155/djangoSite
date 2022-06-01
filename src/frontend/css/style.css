@@ -405,7 +405,37 @@ header{
     }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) and (max-width: 2048px) {
+    .map {
+        height: 1000px;
+    }
+    header {
+        position: fixed; /* Фиксированное позиционирование */
+        left: 0; right: 0; /* Вся ширина */
+        top: 0px; /* Положение сверху */
+        padding: 5px; /* Поля вокруг текста */
+        border: 10px;
+        /*background-color: #080808;*/
+    }
+    header h3{
+        font-size: 140%;
+    }
+    header a{
+        font-size: 120%;
+    }
+    main{
+        position: relative;
+        top: 60px;
+        z-index: 10;
+    }
+    .kindsOfvariablesForMap{
+        width: 30%;
+    }
+    .kindsOfvariablesForMap .variantsOfvariables div{
+        width: 50%;
+    }
+}
+@media (min-width: 2049px){
     .map {
         height: 1000px;
     }
