@@ -47,7 +47,7 @@ function makeString(data_,values_){
             str1+=`Depth: ${data_.depths[i].depth.toFixed(2)}  `;
         }
         if(values_.salinity){
-            str1+=`Salinity: ${data_.depths[i].salinity.toFixed(1)}`;
+            str1+=`Salinity: ${data_.depths[i].salinity.toFixed(1)}  `;
         }
         values_.docf?str1+=`DOC: ${data_.depths[i].DOC.toFixed(2)}<br>`:str1+=`<br>`;
         // str1+=`Depth: ${data_.depths[i].depth.toFixed(2)}  Salinity: ${data_.depths[i].salinity.toFixed(1)}  DOC: ${data_.depths[i].DOC.toFixed(2)}<br>`;
@@ -72,13 +72,14 @@ var values={
 var form=document.getElementById('allVariantsOfVizualization');
 function retrieveFormValue(event){
     event.preventDefault();
-    var name=form.querySelector('[name="nameStf"]');
-    var longitude=form.querySelector('[name="longitudef"]');
-    var latitude=form.querySelector('[name="latitudef"]');
-    var depth=form.querySelector('[name="depthf"]');
-    var salinity=form.querySelector('[name="salinityf"]');
-    var docf=form.querySelector('[name="docf"]');
+    var name=form.querySelector('#nameStf');
+    var longitude=form.querySelector('#longitudef');
+    var latitude=form.querySelector('#latitudef');
+    var depth=form.querySelector('#depthf');
+    var salinity=form.querySelector('#salinityf');
+    var docf=form.querySelector('#docf');
 
+    console.log(docf);
     values.nameOfStation= name.checked;
     values.longitude= longitude.checked;
     values.latitude=latitude.checked;
@@ -86,7 +87,8 @@ function retrieveFormValue(event){
     values.salinity=salinity.checked;
     values.docf=docf.checked;
 }
-var ourmap_=mymap(75, 124.1240,_all_stations,13,3.5,values);
+// var ourmap_=mymap(75, 124.1240,_all_stations,13,3.5,values);
+window.onload=mymap(75, 124.1240,_all_stations,13,3.5,values);
 form.addEventListener('submit', retrieveFormValue);
 console.log(values);
 // var ttt=answerCheckboxMap();
