@@ -72,6 +72,8 @@ var values={
 // var ourmap_=mymap(75, 124.1240,_all_stations,13,3.5,values);
 window.onload=mymap(75, 124.1240,_all_stations,13,3.5,values);
 // form.addEventListener('submit', retrieveFormValue());
-console.log(values);
+
+// console.log(values);
+
 // var ttt=answerCheckboxMap();
     //map.setView([data[0][1], data[0][2]], 3.1);
