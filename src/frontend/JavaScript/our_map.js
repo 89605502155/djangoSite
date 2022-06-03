@@ -68,28 +68,10 @@ var values={
     depth: true,
     salinity: true,
     docf: true
-}
-var form=document.getElementById('allVariantsOfVizualization');
-function retrieveFormValue(event){
-    event.preventDefault();
-    var name=form.querySelector('#nameStf');
-    var longitude=form.querySelector('#longitudef');
-    var latitude=form.querySelector('#latitudef');
-    var depth=form.querySelector('#depthf');
-    var salinity=form.querySelector('#salinityf');
-    var docf=form.querySelector('#docf');
-
-    console.log(docf);
-    values.nameOfStation= name.checked;
-    values.longitude= longitude.checked;
-    values.latitude=latitude.checked;
-    values.depth=depth.checked;
-    values.salinity=salinity.checked;
-    values.docf=docf.checked;
-}
+};
 // var ourmap_=mymap(75, 124.1240,_all_stations,13,3.5,values);
 window.onload=mymap(75, 124.1240,_all_stations,13,3.5,values);
-form.addEventListener('submit', retrieveFormValue);
+// form.addEventListener('submit', retrieveFormValue());
 console.log(values);
 // var ttt=answerCheckboxMap();
     //map.setView([data[0][1], data[0][2]], 3.1);
