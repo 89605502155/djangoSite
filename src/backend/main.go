@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 )
 
 // func home_page(w http.ResponseWriter, r *http.Request) {
@@ -14,4 +15,5 @@ import (
 
 func main() {
 	fmt.Print("Hello word!")
+	http.HandleFunc()
 }
