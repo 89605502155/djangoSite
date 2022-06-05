@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Russia North Ecology Base</title>
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/cover.css">
+  <link rel="stylesheet" href="src/frontend/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/frontend/css/cover.css">
 
   <!--<link rel="stylesheet" href="../JavaScript/libs/v6.13.0-dist/ol.css">
   
@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />--> 
   
   
-  <link rel="stylesheet" href="../JavaScript/leaflet1_7/leaflet.css" />
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="src/frontend/JavaScript/leaflet1_7/leaflet.css" />
+  <link rel="stylesheet" href="src/frontend/css/style.css">
   
 </head>
 
@@ -26,13 +26,13 @@
       <div>
         <h3 class="float-md-start mb-0">Russia North Ecology Base</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a class="nav-link" href="home_page.html">Home</a> 
+          <a class="nav-link" href="src/frontend/html/home_page.html">Home</a> 
           <a class="nav-link active" aria-current="page" href="#">Map</a>
-          <a class="nav-link" href="expeditions_page.html">Expeditions</a>
-          <a class="nav-link" href="transects_page.html">Transects</a>
-          <a class="nav-link" href="news_page.html">News</a>
-          <a class="nav-link" href="methods_page.html">Methods</a>
-          <a class="nav-link" href="publications_page.html">Publications</a>
+          <a class="nav-link" href="src/frontend/html/expeditions_page.html">Expeditions</a>
+          <a class="nav-link" href="src/frontend/html/transects_page.html">Transects</a>
+          <a class="nav-link" href="src/frontend/html/news_page.html">News</a>
+          <a class="nav-link" href="src/frontend/html/methods_page.html">Methods</a>
+          <a class="nav-link" href="src/frontend/html/publications_page.html">Publications</a>
           <a class="nav-link" href="#">Contact</a>
         </nav>
       </div>
@@ -50,8 +50,8 @@
     <main>
       <div id="map" class="map"></div>
 
-      <script src="../JavaScript/leaflet1_7/leaflet.js"></script>
-      <script src="../JavaScript/our_map.js"></script>
+      <script src="src/frontend/JavaScript/leaflet1_7/leaflet.js"></script>
+      <script src="src/frontend/JavaScript/our_map.js"></script>
       <div class="kindsOfvariablesForMap">
         <h3>Which parameters of the stations you want to see?</h3>
         <form name="form1" id="allVariantsOfVizualization">
@@ -68,12 +68,12 @@
             <div class="exportDatato"><button type="button">Export Data</button></div>
           </div>
         </form>
-        <script src="../JavaScript/sellective_output_points_map_page.js"></script>
+        <script src="src/frontend/JavaScript/sellective_output_points_map_page.js"></script>
       </div>
 
       <!-- <script type="text/javascript" src="../JavaScript/makeData.js"></script> -->
       <input type="button" name="addPointsButton" class="addPointsButtoncl" id="addPointsButtonid" value="add Point">
-      <script type="text/javascript" src="../JavaScript/add_points_map_page1_script.js"></script>
+      <script type="text/javascript" src="src/frontend/JavaScript/add_points_map_page1_script.js"></script>
     </main>
   </div>
 </body>
