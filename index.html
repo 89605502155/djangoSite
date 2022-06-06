@@ -17,6 +17,7 @@
   
   <link rel="stylesheet" href="src/frontend/JavaScript/leaflet1_7/leaflet.css" />
   <link rel="stylesheet" href="src/frontend/css/style.css">
+  <link rel="stylesheet" href="src/frontend/css/style_for_map_page1.css">
   <script src="src/frontend/JavaScript/jQuery/jquery-3.6.0.min.js"></script>
   <!-- <script type="text/javascript" src="src/frontend/JavaScript/add_points_map_page2_script.js"></script> -->
   
@@ -72,11 +73,22 @@
             <div class="exportDatato"><button type="button">Export Data</button></div>
           </div>
         </form>
-        <script src="src/frontend/JavaScript/sellective_output_points_map_page.js"></script>
+        <script src="src/frontend/JavaScript/sellective_output_points_map_page.js"id="addPointsButtonid"></script>
       </div> -->
 
       <!-- <script type="text/javascript" src="../JavaScript/makeData.js"></script> -->
       <input type="button" name="addPointsButton" class="addPointsButtoncl" id="addPointsButtonid" value="add Point">
+      <form action="src/backend/afrorization_1.php" method="POST" id="authenticForm">
+        <div class="mb-3">
+        <label for="inputUserName1" class="form-label">User name</label>
+        <input type="text" class="form-control" id="inputUserName1" name="inputUserName1">
+        </div>
+        <div class="mb-3">
+        <label for="inputPassword1" class="form-label">Password</label>
+        <input type="text" class="form-control" id="inputPassword1" name="inputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary" id="mapPagesubmitButton1">Submit</button>
+        </form>
       <!-- <script type="text/javascript" src="src/frontend/JavaScript/add_points_map_page0_script.js"></script> -->
       <script type="text/javascript" src="src/frontend/JavaScript/add_points_map_page1_script.js"></script>
       
