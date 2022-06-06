@@ -28,10 +28,18 @@ addButton.addEventListener("click",function(){
     '<script>'+
     '$(document).ready(function(){'+
     '    $(\'form\').submit(function(event){'+
+    '        event.preventDefault();'+
     '        if ($(\'#inputUserName1\').val()==="" || $(\'#inputPassword1\').val()===""){'+
-    '            event.preventDefault();'+
     '            alert("You want to sent a pass string");'+
     '        }'+
+    '        $.ajax({'+
+    '            type: "POST",'+
+    '            url: "src/backend/afrorization_1.php",'+
+    '            data: $(this).serialize()'+
+    '        }).done(function(){'+
+    '            alert("Ты зареган, всё круто");'+
+    '        });'+
+    '        return false;'+
     '    });'+
     '}); '+
     '</script>'+
