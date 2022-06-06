@@ -1,0 +1,22 @@
+[
+    {
+        "username": "admin",
+        "password": "qwerty"
+    },
+    {
+        "username": "scientist1",
+        "password": "1234"
+    },
+    {
+        "username": "scientist2",
+        "password": "laser"
+    },
+    {
+        "username": "scientist3",
+        "password": "msuchem"
+    },
+    {
+        "username": "scientist4",
+        "password": "ocean"
+    }
+]
