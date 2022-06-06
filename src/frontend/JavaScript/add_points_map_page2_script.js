@@ -1,2 +1,2 @@
-const submitButton1=document.getElementById('mapPagesubmitButton1');
+// const submitButton1=document.getElementById('mapPagesubmitButton1');
 

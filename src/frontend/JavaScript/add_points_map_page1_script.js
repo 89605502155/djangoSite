@@ -32,20 +32,42 @@ addButton.addEventListener("click",function(){
     '        if ($(\'#inputUserName1\').val()==="" || $(\'#inputPassword1\').val()===""){'+
     '            alert("You want to sent a pass string");'+
     '        }'+
+    '        console.log($(this).serialize());'+
     '        $.ajax({'+
     '            type: "POST",'+
     '            url: "src/backend/afrorization_1.php",'+
-    '            data: $(this).serialize()'+
-    '        }).done(function(){'+
-    '            alert("Ты зареган, всё круто");'+
-    '        });'+
-    '        return false;'+
+    '            data: $(this).serialize(),'+
+    '            success: function(response)'+
+    '            {'+
+    '                var jsonData = response;'+
+    '                if (jsonData.success == "1")'+
+    '                {'+
+    '                    alert("Good");'+
+    '                }'+
+    '                else'+
+    '                {'+
+    '                    alert("Invalid Credentials!");'+
+    '                }'+
+    '             }'+
+    '        })'+
     '    });'+
     '}); '+
-    '</script>'+
-    '<script type="text/javascript" src="src/frontend/JavaScript/add_points_map_page1_script.js"></script>';        
+    '</script>';
+
+    $("main").append(txt1);
+
+    // '<script type="text/javascript" src="src/frontend/JavaScript/add_points_map_page1_script.js"></script>';        
     // var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
     // var txt3 = document.createElement("p");  // Create with DOM
     // txt3.innerHTML = "Text.";
-    $("main").append(txt1);
+
+    // '            .done(function() {'+
+    // '             console.log("Ты зареган, всё круто");'+
+    // '        });'+
+    // .done(function(post){'+
+    // '            console.log(post);'+
+    // '        });'+
+    // '        return false;
+    // '            async: true,'+
+    
 });

@@ -22,8 +22,12 @@
 	// echo $decoded_json;
 
 
-	$filename = 'jsonFolder/users.json';
+//sqlite brovze
+//записать интерфейс, который сервер будет предоставлять пользователю
+	header("Content-Type: application/json");
 
+	$filename = 'jsonFolder/users.json';
+//flock
 	$data = file_get_contents($filename);
 	$users = json_decode($data);
 	$trueUserPass=false;
@@ -36,22 +40,14 @@
 			}
 		}
 	}
-	return $trueUserPass;
+	if ($trueUserPass==true) {
+		// выполните аутентификацию пользователя в соответствии с вашими требованиями   
+		// ...
+		// ...
+		// на основе успешной аутентификации
+		echo json_encode(array('success' => 1));
+	} else {
+		echo json_encode(array('success' => 0));
+	}
 	?>
 
-	<!-- <html>
-	<table>
-	    <tbody>
-	        <tr>
-	            <th>Name</th>
-	            <th>Password</th>
-	        </tr>
-	        <?php foreach ($users as $user) { ?>
-	        <tr>
-	            <td> <?= $user->username; ?> </td>
-	            <td> <?= $user->password; ?> </td>
-	        </tr>
-	        <?php } ?>
-	    </tbody>
-	</table>
-	</html> -->
