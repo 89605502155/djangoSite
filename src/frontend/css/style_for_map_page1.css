@@ -4,3 +4,9 @@
 #addPointsButtonid{
     display: block;
 }
+#addStationsParentForm{
+    display: none;
+}
+#howMuchDepthButton1{
+    display: inline;
+}

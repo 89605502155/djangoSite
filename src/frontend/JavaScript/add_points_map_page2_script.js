@@ -1,9 +1,9 @@
 $(document).ready(function(){
     $('#authenticForm').submit(function(event){
         event.preventDefault();
-        if ($('#inputUserName1').val()==="" || $('#inputPassword1').val()===""){
-            alert("You want to sent a pass string");
-        }
+        // if ($('#inputUserName1').val()==="" || $('#inputPassword1').val()===""){
+        //     alert("You want to sent a pass string");
+        // }
         // console.log($(this).serialize());
         $.ajax({
             type: "POST",
@@ -14,6 +14,10 @@ $(document).ready(function(){
                 // var jsonData = response;
                 if (jsonData.success == "1")
                 {
+                    const formForRemove=document.getElementById("authenticForm");
+                    formForRemove.style.display="none";
+                    const addStationFirst = document.getElementById("addStationsParentForm");
+                    addStationFirst.style.display="block";
                     // var txt2='<script src="src/frontend/JavaScript/add_points_map_page3_script.js"></script>';
                     // $("main").append(txt2);
                     alert("Great!");
