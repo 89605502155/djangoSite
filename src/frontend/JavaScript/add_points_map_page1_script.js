@@ -1,54 +1,43 @@
 const addButton = document.getElementById("addPointsButtonid");
 
-const users=[
-    {
-        username: "admin",
-        password: "qwerty"
-    },
-    {
-        username: "scientist",
-        password: "1234"
-    }
-];
+// const users=[
+//     {
+//         username: "admin",
+//         password: "qwerty"
+//     },
+//     {
+//         username: "scientist",
+//         password: "1234"
+//     }
+// ];
 
 
 addButton.addEventListener("click",function(){
-    var username=prompt("Give me your username");
-    const request = new XMLHttpRequest();
-    const url = "../../backend/aftorization_script1.go";
-    const params = "username=" + username;
-
-
-    
-    let userid=-1;
-    var continueAdded=false;
-    for(var i=0;i<users.length;i++){
-        if(username===users[i].username){
-            userid=i;
-            break;
-        }
-    }
-    if(userid===-1){
-        alert("Your user name is not good, try again.");
-        return 0;
-    }
-    // username===firstUser.username ? console.log("Good usn"):console.log("Bad very bad");
-    // console.log(users[userid].username);
-    var password=prompt("Your password");
-    password===users[userid].password? continueAdded=true : alert("Your password is bad");
-    // console.log(continueAdded);
-    if(continueAdded){
-        var numberOfDepths=prompt("How much depths you want to add on our map?");
-        for (var i=0;i<5;i++){
-            if(((Number(numberOfDepths>0))&&(Number.isInteger(Number(numberOfDepths))))){
-                continueAdded=true;
-                break;
-            }
-            numberOfDepths=prompt("Your number were bad. Can you input your number again.");
-            continueAdded=false;
-        };
-        // ((Number(numberOfDepths>0))&&(Number.isInteger(Number(numberOfDepths))))?continueAdded=true:continueAdded=false;        
-    }
-    console.log(continueAdded);
-    console.log(numberOfDepths);
+    addButton.remove();
+    var txt1 = '<form action="src/backend/afrorization_1.php" method="POST">'+
+    '<div class="mb-3">'+
+    '<label for="inputUserName1" class="form-label">User name</label>'+
+    '<input type="text" class="form-control" id="inputUserName1" name="inputUserName1">'+
+    '</div>'+
+    '<div class="mb-3">'+
+    '<label for="inputPassword1" class="form-label">Password</label>'+
+    '<input type="text" class="form-control" id="inputPassword1" name="inputPassword1">'+
+    '</div>'+
+    '<button type="submit" class="btn btn-primary" id="mapPagesubmitButton1">Submit</button>'+
+    '</form>'+
+    '<script>'+
+    '$(document).ready(function(){'+
+    '    $(\'form\').submit(function(event){'+
+    '        if ($(\'#inputUserName1\').val()==="" || $(\'#inputPassword1\').val()===""){'+
+    '            event.preventDefault();'+
+    '            alert("You want to sent a pass string");'+
+    '        }'+
+    '    });'+
+    '}); '+
+    '</script>'+
+    '<script type="text/javascript" src="src/frontend/JavaScript/add_points_map_page1_script.js"></script>';        
+    // var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
+    // var txt3 = document.createElement("p");  // Create with DOM
+    // txt3.innerHTML = "Text.";
+    $("main").append(txt1);
 });
