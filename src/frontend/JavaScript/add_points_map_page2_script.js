@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('form').submit(function(event){
+    $('#authenticForm').submit(function(event){
         event.preventDefault();
         if ($('#inputUserName1').val()==="" || $('#inputPassword1').val()===""){
             alert("You want to sent a pass string");

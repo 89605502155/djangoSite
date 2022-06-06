@@ -17,8 +17,8 @@ addButton.addEventListener("click",function(){
     // addButton.remove();
     const form1=document.getElementById("authenticForm");
     form1.style.display="block";
-    var txt1 = 
-    '<script src="src/frontend/JavaScript/add_points_map_page2_script.js">'+
+    // var txt1 = 
+    // '<script src="src/frontend/JavaScript/add_points_map_page2_script.js">'+
     // '$(document).ready(function(){'+
     // '    $(\'form\').submit(function(event){'+
     // '        event.preventDefault();'+
@@ -45,9 +45,9 @@ addButton.addEventListener("click",function(){
     // '        })'+
     // '    });'+
     // '}); '+
-    '</script>';
+    // '</script>';
 
-    $("main").append(txt1);
+    // $("main").append(txt1);
 
     // '<script type="text/javascript" src="src/frontend/JavaScript/add_points_map_page1_script.js"></script>';        
     // var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
