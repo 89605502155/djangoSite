@@ -18,6 +18,7 @@ $(document).ready(function(){
                 if (jsonData.success == "1")
                 {
                     document.getElementById("addStationsParentForm").style.display="block";
+                    // document.getElementById("howMuchDepthButton1").style.display="block";
                     // var txt2='<script src="src/frontend/JavaScript/add_points_map_page3_script.js"></script>';
                     // $("main").append(txt2);
                     alert("Great!");

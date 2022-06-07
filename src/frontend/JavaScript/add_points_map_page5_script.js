@@ -2,7 +2,6 @@ $(document).ready(function(){
     $('#addStationsParentForm').submit(function(event){
         event.preventDefault();
         console.log($(this).serialize());
-        console.log($('#addedPointDepth0').val());
         $.ajax({
             type: "POST",
             url: "src/backend/add_poins_1.php",
@@ -14,6 +13,7 @@ $(document).ready(function(){
                 document.getElementById("addPointsButtonid").style.display="block";
                 // var jsonData = response;
                 (jsonData.success == "1")?alert("You add point, good!"):alert("Panic Error!!!");
+                window.location.reload();
             }
         });
     });
