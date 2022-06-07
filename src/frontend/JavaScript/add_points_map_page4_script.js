@@ -10,9 +10,9 @@ $(document).ready(function(){
             // console.log(strDepth);
             $('#addStationsParentForm').append('<div class="col-auto">'+
             '<h4>Depth number '+(i+1)+'</h4>'+
-            '<div><label for='+strDepth+'>Depth</label><input type="number" class="form-control" id='+strDepth+' placeholder=Depth></div>'+
-            '<div><label for='+strSalinity+'>Salinity</label><input type="number" class="form-control" id='+strSalinity+' placeholder=Salinity></div>'+
-            '<div><label for='+strDoc+'>DOC</label><input type="number" class="form-control" id='+strDoc+' placeholder=DOC></div>'+
+            '<div><label for='+strDepth+'>Depth</label><input type="number" class="form-control" id='+strDepth+' name='+strDepth+' placeholder=Depth></div>'+
+            '<div><label for='+strSalinity+'>Salinity</label><input type="number" class="form-control" id='+strSalinity+' name='+strSalinity+' placeholder=Salinity></div>'+
+            '<div><label for='+strDoc+'>DOC</label><input type="number" class="form-control" id='+strDoc+' name='+strDoc+' placeholder=DOC></div>'+
             '</div>');
         }
         $('#addStationsParentForm').append('<button type="submit" class="btn btn-primary" id="mapPagesubmitButton2">Submit</button>')

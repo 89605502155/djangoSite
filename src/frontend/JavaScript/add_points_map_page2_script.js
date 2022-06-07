@@ -5,6 +5,7 @@ $(document).ready(function(){
         //     alert("You want to sent a pass string");
         // }
         // console.log($(this).serialize());
+        document.getElementById("mapPagesubmitButton1").style.pointerEvents="none";
         $.ajax({
             type: "POST",
             url: "src/backend/afrorization_1.php",
@@ -12,28 +13,24 @@ $(document).ready(function(){
             success: function(jsonData)
             {
                 // var jsonData = response;
+                document.getElementById("authenticForm").style.display="none";
+                document.getElementById("mapPagesubmitButton1").style.pointerEvents="auto";
                 if (jsonData.success == "1")
                 {
-                    const formForRemove=document.getElementById("authenticForm");
-                    formForRemove.style.display="none";
-                    const addStationFirst = document.getElementById("addStationsParentForm");
-                    addStationFirst.style.display="block";
+                    document.getElementById("addStationsParentForm").style.display="block";
                     // var txt2='<script src="src/frontend/JavaScript/add_points_map_page3_script.js"></script>';
                     // $("main").append(txt2);
                     alert("Great!");
                 }
                 else
                 {
-                    const formForRemove=document.getElementById("authenticForm");
-                    formForRemove.style.display="none";
                     alert("Invalid Credentials!");
-                    const addButton = document.getElementById("addPointsButtonid");
-                    addButton.style.display="block";
+                    document.getElementById("addPointsButtonid").style.display="block";
                     // var txt2='<script src="src/frontend/JavaScript/add_points_map_page1_script.js"></script>';
                     // $("main").append(txt2);
                 }
             }
-        })
+        });
     });
 });
 

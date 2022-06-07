@@ -98,19 +98,19 @@
         <div class="form-row align-items-center">
           <div class="col-auto">
             <label for="inputNameAddedStation1">Name of Station</label>
-            <input type="text" class="form-control" id="inputNameAddedStation1" placeholder="Name of Station">
+            <input type="text" class="form-control" id="inputNameAddedStation1" name="inputNameAddedStation1" placeholder="Name of Station">
           </div>
           <div class="col-auto">
             <label for="inputLongitudeAddedStation1">Longitude</label>
-            <input type="number" class="form-control" id="inputLongitudeAddedStation1" placeholder="Longitude">
+            <input type="number" class="form-control" id="inputLongitudeAddedStation1" name="inputLongitudeAddedStation1" placeholder="Longitude">
           </div>
           <div class="col-auto">
             <label for="inputLatitudeAddedStation1">Latitude</label>
-            <input type="number" class="form-control" id="inputLatitudeAddedStation1" placeholder="Latitude">
+            <input type="number" class="form-control" id="inputLatitudeAddedStation1" name="inputLatitudeAddedStation1" placeholder="Latitude">
           </div>
           <div class="col-auto">
             <label for="inputDepthAddedStation1">Number of Depth</label>
-            <input type="number" step="1" min="1" max="1000000" onchange="this.value = parseInt(this.value); (this.value<=0)?this.value=1:this.value=this.value;" class="form-control" id="inputDepthAddedStation1" placeholder="Number of Depth">
+            <input type="number" step="1" min="1" max="1000000" name="inputDepthAddedStation1" onchange="this.value = parseInt(this.value); (this.value<=0)?this.value=1:this.value=this.value;" class="form-control" id="inputDepthAddedStation1" placeholder="Number of Depth">
           </div>
           <div class="col-auto my-1">
             <button type="button" class="btn btn-primary" id="howMuchDepthButton1">Next</button>
@@ -122,6 +122,7 @@
       <script src="src/frontend/JavaScript/add_points_map_page2_script.js"></script>
       <script src="src/frontend/JavaScript/add_points_map_page3_script.js"></script>
       <script src="src/frontend/JavaScript/add_points_map_page4_script.js"></script>
+      <script src="src/frontend/JavaScript/add_points_map_page5_script.js"></script>
     </main>
   </div>
 </body>
