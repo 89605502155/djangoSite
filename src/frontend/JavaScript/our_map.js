@@ -24,6 +24,7 @@ function mymap(leftmargin_,rightmargin_,data,maxzoom_,size_,values_){
         maxZoom: maxzoom_
     });
     Esri_OceanBasemap.addTo(map);
+    // downlodData();
     for (var i = 0; i < data.length; ++i) {
         // L.marker([data_[i][1], data_[i][2]]).addTo(map).bindPopup(`Name: ${data[i][0].toString()} <br>
         //     Longitude: ${data_[i][2].toString()}<br>Latitude: ${data_[i][1].toString()}`);
@@ -69,11 +70,13 @@ var values={
     salinity: true,
     docf: true
 };
-// var ourmap_=mymap(75, 124.1240,_all_stations,13,3.5,values);
-window.onload=mymap(75, 124.1240,_all_stations,13,3.5,values);
-// form.addEventListener('submit', retrieveFormValue());
-
-// console.log(values);
-
-// var ttt=answerCheckboxMap();
-    //map.setView([data[0][1], data[0][2]], 3.1);
+var _all_stations_php;
+function downlodData(){
+    $.get('src/backend/jsonFolder/oldStations.json', function(datag) {
+        // console.log(typeof(datag));
+        $.get('src/backend/jsonFolder/added_points.json', function(datag2) {
+            window.onload=mymap(75, 124.1240,datag.concat(datag2),13,3.5,values);
+        });
+    });
+}
+downlodData();

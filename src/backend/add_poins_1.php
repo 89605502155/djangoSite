@@ -4,11 +4,12 @@
     $latitude=$_POST['inputLatitudeAddedStation1'];
     $numberDepths=$_POST['inputDepthAddedStation1'];
 
+    header("Content-Type: application/json");
     $filename = 'jsonFolder/added_points.json';
 
     
     $data = file_get_contents($filename);
-    flock($filename, LOCK_EX);
+    // flock($filename, LOCK_EX);
 	$stations = json_decode($data);
     for($i=0;$i<sizeof($stations);$i++){
         if($stations[$i]->name == $name){
@@ -22,21 +23,21 @@
         $sal=$_POST['addedPointSalinit'.(string)$i];
         $doc=$_POST['addedPointDoc'.(string)$i];
         array_push($numDep,(object)[
-            'depth'=>$dep,
-            'salinity'=>$sal,
-            'DOC'=>$doc
+            'depth'=>(float)$dep,
+            'salinity'=>(float)$sal,
+            'DOC'=>(float)$doc
         ]);
     }
     $obj = (object)[
         'name'=>$name,
-        'lat'=>$latitude,
-        'lon'=>$longitude,
+        'lat'=>(float)$latitude,
+        'lon'=>(float)$longitude,
         'depths'=>$numDep
     ];
     
     array_push($stations,$obj);
     file_put_contents('jsonFolder/added_points.json',json_encode($stations));
-    flock($filename, LOCK_UN);
+    // flock($filename, LOCK_UN);
     echo json_encode(array('success' => 1));
     // $name="hh";
     // $sur="878787";

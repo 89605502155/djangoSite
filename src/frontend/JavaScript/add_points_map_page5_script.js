@@ -12,7 +12,11 @@ $(document).ready(function(){
                 document.getElementById("addStationsParentForm").style.display="none";
                 document.getElementById("addPointsButtonid").style.display="block";
                 // var jsonData = response;
-                (jsonData.success == "1")?alert("You add point, good!"):alert("Panic Error!!!");
+                if(jsonData.success == "1"){
+                    alert("You add point, good!");
+                } else{
+                    alert("Panic Error!!!");
+                }
                 window.location.reload();
             }
         });
